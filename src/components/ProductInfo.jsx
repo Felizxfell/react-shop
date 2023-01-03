@@ -1,13 +1,9 @@
 import React from "react";
-import BtAddToCart from '../images/bt_add_to_cart.svg'
-import '../styles/AddToCard.scss'
+import BtAddToCart from "../images/bt_add_to_cart.svg";
 
-export default function AddToCard() {
+export default function ProductInfo() {
   return (
-    <aside className="product-detail">
-      <div className="product-detail-close">
-        <img src="./icons/icon_close.png" alt="close" />
-      </div>
+    <>
       <img
         src="https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
         alt="bike"
@@ -24,6 +20,6 @@ export default function AddToCard() {
           Add to cart
         </button>
       </div>
-    </aside>
+    </>
   );
 }

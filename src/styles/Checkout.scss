@@ -1,23 +1,24 @@
-.product-detail {
-    width: 360px;
-    padding: 24px;
-    box-sizing: border-box;
-    position: absolute;
-    right: 0;
-}
-
-.title-container {
-    display: flex;
-}
-
-.title-container img {
-    transform: rotate(180deg);
-    margin-right: 14px;
+.my-order {
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    place-items: center;
 }
 
 .title {
     font-size: var(--lg);
-    font-weight: bold;
+    margin-bottom: 40px;
+}
+
+.my-order-container {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    width: 300px;
+}
+
+.my-order-content {
+    display: flex;
+    flex-direction: column;
 }
 
 .order {
@@ -39,6 +40,11 @@
 .order p span:nth-child(1) {
     font-size: var(--md);
     font-weight: bold;
+}
+
+.order p span:nth-child(2) {
+    font-size: var(--sm);
+    color: var(--very-light-pink);
 }
 
 .order p:nth-child(2) {
@@ -72,22 +78,4 @@
 .shopping-cart p:nth-child(3) {
     font-size: var(--md);
     font-weight: bold;
-}
-
-.primary-button {
-    background-color: var(--hospital-green);
-    border-radius: 8px;
-    border: none;
-    color: var(--white);
-    width: 100%;
-    cursor: pointer;
-    font-size: var(--md);
-    font-weight: bold;
-    height: 50px;
-}
-
-@media (max-width: 640px) {
-    .product-detail {
-        width: 100%;
-    }
 }

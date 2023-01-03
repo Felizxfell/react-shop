@@ -1,12 +1,12 @@
 import React from 'react'
 import Header from '../components/Header'
-import ProductsCards from '../containers/ProductsCards'
+import ProductsList from '../containers/ProductsList'
 
 export default function Home() {
   return (
     <div>
         <Header />
-        <ProductsCards />
+        <ProductsList />
     </div>
   )
 }

@@ -1,7 +1,4 @@
 import React from "react";
-import Button from "../components/Button";
-import Input from "../components/Input";
-import Label from "../components/Label";
 import "../styles/Registrer.scss";
 
 export default function Registrer() {
@@ -11,31 +8,42 @@ export default function Registrer() {
         <h1 className="title">My account</h1>
         <form action="/" className="form">
           <div>
-            <Label htmlFor="name" text="Name" />
-            <Input
+            <label htmlFor="name" className="label">
+              Name
+            </label>
+            <input
               type="text"
               id="name"
               placeholder="Teff"
-              className="input-name"
+              className="input input-name"
             />
 
-            <Label htmlFor="email" text="Email" />
-            <Input
+            <label htmlFor="email" className="label">
+              Email
+            </label>
+            <input
               type="text"
               id="email"
               placeholder="platzi@example.com"
-              className="input-email"
+              className="input input-email"
             />
 
-            <Label htmlFor="password" text="Password" />
-            <Input
+            <label htmlFor="password" className="label">
+              Password
+            </label>
+            <input
               type="password"
               id="password"
               placeholder="*********"
-              className="input-password"
+              className="input input-password"
             />
           </div>
-          <Button text="Create" className="primary-button login-reg-button" />
+
+          <input
+            type="submit"
+            defaultValue="Create"
+            className="primary-button login-button"
+          />
         </form>
       </div>
     </div>

@@ -1,24 +1,23 @@
 import React from "react";
-import LogoYardSale from "../images/logo_yard_sale.svg";
 import Email from "../images/email.svg";
-import "../styles/RecoveryPassword.scss";
-import Image from "../components/Image";
-import Button from "../components/Button";
+import LogoYardSale from "../images/logo_yard_sale.svg";
+import "../styles/SendEmail.scss";
 
-export default function RecoveryPassword() {
+export default function SendEmail() {
   return (
-    <div className="login-rp">
-      <div className="form-container-rp">
-        <Image src={LogoYardSale} />
+    <div className="SendEmail">
+      <div className="SendEmail-container">
+        <img src={LogoYardSale} className="SendEmail-logo" />
+
         <h1 className="title">Email has been sent!</h1>
         <p className="subtitle">
           Please check your inbox for instructions on how to reset the password
         </p>
 
         <div className="email-image">
-          <Image src={Email} alt="email" className='logo-rp' />
+          <img src={Email} alt="email" className="logo-rp" />
         </div>
-        <Button className="primary-button login-button" text="Login" />
+        <button className="primary-button login-button">Login</button>
 
         <p className="resend">
           <span>Didn't receive the email?</span>
