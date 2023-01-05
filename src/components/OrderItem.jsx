@@ -1,18 +1,18 @@
 import React from "react";
 import IconClose from "../images/icon_close.png";
 
-export default function OrderItem() {
+export default function OrderItem({ product, removeFromCart }) {
   return (
     <div className="shopping-cart">
       <figure>
         <img
-          src="https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-          alt="bike"
+          src={product.images[0]}
+          alt={product.title}
         />
       </figure>
-      <p>Bike</p>
-      <p>$30,00</p>
-      <img src={IconClose} alt="close" />
+      <p>{product.title}</p>
+      <p>{product.price}</p>
+      <img src={IconClose} alt="close" className="close" onClick={() => removeFromCart(product.id)} />
     </div>
   );
 }
