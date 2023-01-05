@@ -4,6 +4,10 @@
     box-sizing: border-box;
     position: absolute;
     right: 0;
+    background-color: var(--white);
+    top: 60px;
+    border-radius: 6px;
+    border: 1px solid var(--very-light-pink);
 }
 
 .title-container {
@@ -63,6 +67,10 @@
     height: 70px;
     border-radius: 20px;
     object-fit: cover;
+}
+
+.close {
+    cursor: pointer;
 }
 
 .shopping-cart p:nth-child(2) {
