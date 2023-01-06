@@ -14,13 +14,10 @@ const useInitialState = () => {
         })
     }
 
-    const removeFromCart = (id) => {        
-        const copystate = [...state.cart]
-        const index = copystate.findIndex(item => item.id === id)
-        copystate.splice(index, 1)
+    const removeFromCart = (id) => {
         setState({
             ...state,
-            cart: [...copystate]
+            cart: state.cart.filter((_, index) => index != id)
         })
     }
 

@@ -1,7 +1,7 @@
 import React from "react";
 import IconClose from "../images/icon_close.png";
 
-export default function OrderItem({ product, removeFromCart }) {
+export default function OrderItem({ product, removeFromCart, index }) {
   return (
     <div className="shopping-cart">
       <figure>
@@ -12,7 +12,7 @@ export default function OrderItem({ product, removeFromCart }) {
       </figure>
       <p>{product.title}</p>
       <p>{product.price}</p>
-      <img src={IconClose} alt="close" className="close" onClick={() => removeFromCart(product.id)} />
+      <img src={IconClose} alt="close" className="close" onClick={() => removeFromCart(index)} />
     </div>
   );
 }

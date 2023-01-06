@@ -8,8 +8,8 @@ export default function MyOrder() {
   const { state, removeFromCart } = useContext(AppContext);
 
   const total = state.cart.reduce((accum, curre) => {
-    return accum + curre.price
-  }, 0)
+    return accum + curre.price;
+  }, 0);
 
   return (
     <aside className="product-detail">
@@ -18,8 +18,13 @@ export default function MyOrder() {
         <p className="title">My order</p>
       </div>
       <div className="my-order-content">
-        {state.cart.map(item => (
-          <OrderItem product={item} removeFromCart={removeFromCart} key={`orderitem-${item.id}`} />
+        {state.cart.map((item, index) => (
+          <OrderItem
+            product={item}
+            removeFromCart={removeFromCart}
+            key={`orderitem-${index}`}
+            index={index}
+          />
         ))}
         <div className="order">
           <p>
